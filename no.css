@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f18e5b;
+    margin: 0;
+}
+
+.header_text {
+    font-family: 'Nunito';
+    font-size: 27px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.container {
+    position: relative
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust the height based on your design */
+    position: relative;
+}
+
+
+.hover_text {
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:cyan;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container:hover .hover_text {
+    opacity: 1;
+}
