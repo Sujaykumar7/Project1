@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control</title>
+    <link rel="stylesheet" href="./Login.css">
+</head>
+<body>
+
+<div class="box">
+    <h1>Welcome</h1>
+    <label for="keywordInput">Enter the keyword:</label>
+    <input type="password" id="keywordInput" onkeypress="handleKeyPress(event)">
+    <button onclick="checkAccess()">Submit</button>
+
+    <div id="messageContainer"></div>
+    <p id="hint"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<script>
+    VanillaTilt.init(document.querySelector(".box"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+    });
+</script>
+
+<script>
+    var correctKeyword = "secret";
+    var attempts = 0;
+
+    function checkAccess() {
+        var enteredKeyword = document.getElementById("keywordInput").value;
+        var messageContainer = document.getElementById("messageContainer");
+        var hint = document.getElementById("hint");
+        messageContainer.innerHTML = "";
+
+        if (enteredKeyword === correctKeyword) {
+            messageContainer.innerHTML += "<p>Access granted! You can see the content now.</p>";
+            hint.innerHTML = "";
+            window.location.href = 'newpage.html';
+        } else {
+            attempts++;
+            messageContainer.innerHTML += "<p>Access denied. Try again!</p>";
+
+            hint.innerHTML = "<p>This is attempt number " + attempts + ".</p>";
+
+            if (attempts % 5 === 0) {
+                displaySpecialMessage();
+            }
+
+            messageContainer.style.display = "block";
+        }
+
+        document.getElementById("keywordInput").value = "";
+    }
+
+    function displaySpecialMessage() {
+        var messageContainer = document.getElementById("messageContainer");
+        var specialMessages = ["You are doing great!", "Keep trying!", "Almost there!", "Persistence is key!", "Believe in yourself!"];
+        var randomIndex = Math.floor(Math.random() * specialMessages.length);
+        var randomMessage = specialMessages[randomIndex];
+        messageContainer.innerHTML += "<p>" + randomMessage + "</p>";
+    }
+
+    function handleKeyPress(event) {
+        if (event.keyCode === 13) {
+            checkAccess();
+        }
+    }
+</script>
+
+</body>
+</html>
