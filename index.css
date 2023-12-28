@@ -1,4 +1,4 @@
-.body {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-.div {
+div {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -17,11 +17,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.h1 {
+h1 {
     color: #3498db;
 }
 
-.label, input, button {
+label, input, button {
     margin: 10px;
     padding: 10px;
     font-size: 16px;
@@ -30,18 +30,18 @@
     outline: none;
 }
 
-.input, button {
+input, button {
     border: 1px solid #3498db;
     background: #2c3e50;
     color: white;
     cursor: pointer;
 }
 
-.button {
+button {
     background: #3498db;
 }
 
-.button:hover {
+button:hover {
     background: #2980b9;
 }
 
