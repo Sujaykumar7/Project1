@@ -1,4 +1,4 @@
-.body {
+body {
     margin: 0;
     overflow: hidden;
     font-family: 'Arial', sans-serif;
@@ -21,17 +21,17 @@
     z-index: -999;
 }
 
-.container {
+container {
     text-align: center;
     z-index: 1;
     color: #fff;
 }
 
-.h1 {
+h1 {
     font-size: 24px;
 }
 
-.button {
+button {
     background-color: purple;
     color: white;
     padding: 15px 30px;
@@ -43,11 +43,11 @@
     transition: background-color 0.3s;
 }
 
-.button:hover {
+button:hover {
     background-color:black;
 }
 
-.header_text {
+header_text {
     font-size: 24px;
     margin-bottom: 20px;
     color:black;
