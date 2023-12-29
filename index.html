@@ -9,7 +9,7 @@
 <body>
 
 <div class="box">
-    <h1>Welcome</h1>
+    <h1>Hello Baby Are You Ready</h1>
     <label for="keywordInput">Type the Mysterious Word To Enter❣️</label>
     <input type="password" id="keywordInput" onkeypress="handleKeyPress(event)">
     <button onclick="checkAccess()">Click me</button>
@@ -31,7 +31,7 @@
 </script>
 
 <script>
-    var correctKeyword = "secret";
+    var correctKeyword = "simransujaywankhede";
     var attempts = 0;
 
     function checkAccess() {
@@ -41,12 +41,12 @@
         messageContainer.innerHTML = "";
 
         if (enteredKeyword === correctKeyword) {
-            messageContainer.innerHTML += "<p>Access granted! You can see the content now.</p>";
+            messageContainer.innerHTML += "<p>Great Baby 😘 I Love You </p>";
             hint.innerHTML = "";
             window.location.href = 'Anime.html';
         } else {
             attempts++;
-            messageContainer.innerHTML += "<p>Access denied. Try again!</p>";
+            messageContainer.innerHTML += "<p>Access denied !!! Try again!</p>";
 
             hint.innerHTML = "<p>This is attempt number " + attempts + ".</p>";
 
@@ -62,7 +62,7 @@
 
     function displaySpecialMessage() {
         var messageContainer = document.getElementById("messageContainer");
-        var specialMessages = ["You are doing great!", "Keep trying!", "Almost there!", "Persistence is key!", "Believe in yourself!"];
+        var specialMessages = ["Baby kay Kartey AS", "Keep trying Baby!", "Baby Ajun Pn Samjal Nahi?!", "Wa Baby Wa!", "Keep Trying Baby!"];
         var randomIndex = Math.floor(Math.random() * specialMessages.length);
         var randomMessage = specialMessages[randomIndex];
         messageContainer.innerHTML += "<p>" + randomMessage + "</p>";
