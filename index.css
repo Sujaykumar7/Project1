@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     background: linear-gradient(#063349 0%, #090979 35%, #00d4ff 100%);
-    color: white;
+    color: pink;
     font-family: 'Arial', sans-serif;
 }
 
@@ -18,7 +18,7 @@ div {
 }
 
 h1 {
-    color: #3498db;
+    color: black;
 }
 
 label, input, button {
@@ -31,9 +31,9 @@ label, input, button {
 }
 
 input, button {
-    border: 1px solid #3498db;
-    background: #2c3e50;
-    color: white;
+    border: 1px solid pink;
+    background: black;
+    color: red;
     cursor: pointer;
 }
 
