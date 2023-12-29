@@ -43,20 +43,20 @@
             
                     function moveButton(event) {
                         if (moveCount < 69) {
-                            // Move the button if the count is less than 69
+                            
                             var x = Math.random() * (window.innerWidth - event.target.offsetWidth);
                             var y = Math.random() * (window.innerHeight - event.target.offsetHeight);
                             event.target.style.left = `${x}px`;
                             event.target.style.top = `${y}px`;
                             moveCount++;
             
-                            // Update the count bar
+                            
                             document.getElementById('moveCount').textContent = moveCount;
                         }
                     }
             
                     function openPage() {
-                        // Double-click opens the next page
+                        
                         window.location.href = "no.html";
                     }
                 </script>
